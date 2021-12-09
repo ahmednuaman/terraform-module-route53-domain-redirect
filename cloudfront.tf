@@ -14,7 +14,7 @@ resource "aws_cloudfront_distribution" "redirect" {
   price_class     = "PriceClass_100"
   comment         = aws_s3_bucket.redirect_bucket.bucket
   enabled         = true
-  is_ipv6_enabled = false
+  is_ipv6_enabled = true
 
   aliases = ["www.${var.zone}", var.zone]
 
